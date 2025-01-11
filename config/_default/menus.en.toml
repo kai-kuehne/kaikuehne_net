@@ -1,0 +1,15 @@
+#[[main]]
+#  name = "About"
+#  pageRef = "about"
+#  weight = 10
+
+#[[main]]
+#  name = "Blog"
+#  pageRef = "blog"
+#  weight = 20
+
+[[main]]
+  name = "CV"
+  pageRef = "cv"
+  weight = 30
+
