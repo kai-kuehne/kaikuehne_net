@@ -1,0 +1,17 @@
+#+CATEGORY: kaikuehne_net
+
+* Ideas
+** TODO Add a tools section listing stuff I use to create things
+** TODO A section that lists small things I have built. Maybe shaders, still images, generative artsy stuff
+** TODO Anything music related?
+** TODO Project list?
+*** TODO Schattenfell
+*** TODO Chordel
+*** TODO Bragi
+*** TODO Using Ableton Push as a Game Controller
+** TODO Blog?
+*** TODO How i wrote odin bindings for tinysoundfont
+** TODO Something like trivium where i share cool findings? LeckerNews. For gamedevs only?
+** TODO TIL?
+** TODO Maybe have a blogring using openring https://git.sr.ht/~sircmpwn/openring
+

@@ -1,7 +1,0 @@
-# https://jpanther.github.io/congo/docs/configuration/#site-configuration
-
-baseURL = "https://kaikuehne.net/"
-defaultContentLanguage = "en"
-title = "Kai Kühne"
-theme = "congo"
-

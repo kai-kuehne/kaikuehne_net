@@ -1,0 +1,70 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bgColor: #000;
+        --textColor: #fff;
+        --fontSize: calc(100vw / 90);
+        --linkBgColor: #c7e2bb;
+        --linkColor: var(--bgColor);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bgColor: #fff;
+        --textColor: #000;
+        --fontSize: calc(100vw / 90);
+        --linkBgColor: #c7e2bb;
+        --linkColor: var(--textColor);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --fontSize: calc(100vw / 30);
+    }
+}
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+    :root {
+        --fontSize: 1.7vw;
+    }
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body > r-grid {
+    grid-column-gap: calc(var(--lineHeight) * 2);
+}
+
+a, a:hover {
+    padding: 3px 5px;
+    display: inline-block;
+    color: var(--linkColor);
+    background-color: var(--linkBgColor);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--linkColor);
+}
+
+a:visited {
+    color: var(--linkColor);
+}
+
+r-cell.ruler {
+  height: 0.2rem;
+  background: var(--textColor);
+  margin-top: calc(var(--lineHeight) * 2);
+}
+
+r-grid > r-cell.h2 {
+  margin-top: var(--lineHeight);
+}
+
