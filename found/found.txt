@@ -1,0 +1,13 @@
+2025-02-08:
+
+The Teensy Files
+A series of articles on how to create tiny ELF binaries. By Brian Raiter.
+https://www.muppetlabs.com/~breadbox/software/tiny/
+
+Web design inspiration catalog
+A curated collection of design-heavy websites.
+https://www.curated.design/
+
+Modest: A musical harmoy library for lua
+Written in Fennel, by Yegor Budylin.
+https://github.com/esbudylin/modest
