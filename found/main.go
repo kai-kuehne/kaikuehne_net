@@ -63,13 +63,12 @@ func parseFile(filename string) ([]Section, error) {
 
 	scanner := bufio.NewScanner(file)
 	dateRegex := regexp.MustCompile(`^\d{4}-\d{2}-\d{2}:$`)
-	urlRegex := regexp.MustCompile(`^https?://`) // Match http or https links
+	urlRegex := regexp.MustCompile(`^https?://`)
 
 	for scanner.Scan() {
 		line := scanner.Text()
 
 		if dateRegex.MatchString(line) {
-			// Save previous section if it exists
 			if currentSection.Date != "" {
 				if len(entryLines) > 0 {
 					currentEntry = parseEntry(entryLines, urlRegex)
@@ -78,27 +77,23 @@ func parseFile(filename string) ([]Section, error) {
 				sections = append(sections, currentSection)
 			}
 
-			// Start new section
 			currentSection = Section{
 				Date:    strings.TrimSuffix(line, ":"),
 				Entries: []Entry{},
 			}
-			entryLines = nil // Reset entry lines for new section
+			entryLines = nil
 
 		} else if strings.TrimSpace(line) == "" {
-			// Empty line indicates end of an entry
 			if len(entryLines) > 0 {
 				currentEntry = parseEntry(entryLines, urlRegex)
 				currentSection.Entries = append(currentSection.Entries, currentEntry)
-				entryLines = nil // Reset for next entry
+				entryLines = nil
 			}
 		} else {
-			// Collect lines for the current entry
 			entryLines = append(entryLines, line)
 		}
 	}
 
-	// Add the last section and entry if any
 	if len(entryLines) > 0 {
 		currentEntry = parseEntry(entryLines, urlRegex)
 		currentSection.Entries = append(currentSection.Entries, currentEntry)
