@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Found; Not Lost</title>
+    <subtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</subtitle>
+    <link href="https://kaikuehne.net/found/feed.xml" rel="self"/>
+    <link href="https://kaikuehne.net/found/"/>
+    <id>https://kaikuehne.net/found/</id>
+    <updated>2025-02-12T22:08:41Z</updated>
+    <author>
+        <name>Kai Kühne</name>
+    </author>
+    <entry>
+        <title>2025-02-08</title>
+        <link href="https://kaikuehne.net/found#2025-02-08"/>
+        <id>https://kaikuehne.net/found/#2025-02-08</id>
+        <content type="html">
+            <![CDATA[
+            <ul>
+                <li><a href="https://www.muppetlabs.com/~breadbox/software/tiny/">The Teensy Files</a> &horbar; A series of articles on how to create tiny ELF binaries. By Brian Raiter.</li>
+                <li><a href="https://www.curated.design/">Web design inspiration catalog</a> &horbar; A curated collection of design-heavy websites.</li>
+                <li><a href="https://github.com/esbudylin/modest">Modest: A musical harmony library for lua</a> &horbar; Written in Fennel, by Yegor Budylin.</li>
+            </ul>
+            ]]>
+        </content>
+    </entry>
+</feed>

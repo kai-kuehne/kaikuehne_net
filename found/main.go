@@ -7,11 +7,41 @@ import (
 	"regexp"
 	"strings"
 	"text/template"
+	"time"
 )
 
 func main() {
-	// 1) Read index.tpl.
-	r, err := os.Open("index.tpl")
+	sections, err := parseFile("found.txt")
+	if err != nil {
+		panic(err)
+	}
+
+	updated := time.Now().UTC().Format(time.RFC3339)
+	feed := Feed{updated, sections}
+
+	renderFile("index.tpl", "index.html", sections)
+	renderFile("feed.tpl", "feed.xml", feed)
+}
+
+type Feed struct {
+	Updated  string
+	Sections []Section
+}
+
+type Section struct {
+	Date    string
+	Entries []Entry
+}
+
+type Entry struct {
+	Title       string
+	Description string
+	Link        string
+}
+
+func renderFile(templatePath, outPath string, data any) {
+	// Open Template
+	r, err := os.Open(templatePath)
 	if err != nil {
 		panic(err)
 	}
@@ -24,29 +54,16 @@ func main() {
 		panic(err)
 	}
 
-	// 2) Read found.txt.
-	var sections []Section
-	sections, err = parseFile("found.txt")
+	// Write outfile
+	html, err := os.Create(outPath)
 	if err != nil {
 		panic(err)
 	}
-
-	// 3) Write index.html.
-	err = tmpl.Execute(os.Stdout, sections)
+	defer html.Close()
+	err = tmpl.Execute(html, data)
 	if err != nil {
 		panic(err)
 	}
-}
-
-type Section struct {
-	Date    string
-	Entries []Entry
-}
-
-type Entry struct {
-	Title       string
-	Description string
-	Link        string
 }
 
 func parseFile(filename string) ([]Section, error) {

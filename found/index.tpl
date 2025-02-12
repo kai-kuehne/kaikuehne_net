@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml">
     <link rel="stylesheet" href="/raster2.css">
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -27,10 +28,12 @@
         </r-cell>
         <r-cell span="4-8">
         {{- range .}}
-            <h2>{{.Date}}</h2>
-            {{- range .Entries}}
-                <p><a href="{{.Link}}">{{.Title}}</a> &horbar; {{.Description}}</p>
-            {{- end}}
+            <section id="{{.Date}}">
+                <h2>{{.Date}}</h2>
+                {{- range .Entries}}
+                    <p><a href="{{.Link}}">{{.Title}}</a> &horbar; {{.Description}}</p>
+                {{- end}}
+            </section>
         {{- end}}
         </r-cell>
     </r-grid>

@@ -1,5 +1,5 @@
 #!/bin/sh
 
 vim found.txt
-go run ./main.go > index.html
+go run ./main.go
 
