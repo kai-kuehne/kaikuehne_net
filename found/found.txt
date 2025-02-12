@@ -8,6 +8,6 @@ Web design inspiration catalog
 A curated collection of design-heavy websites.
 https://www.curated.design/
 
-Modest: A musical harmoy library for lua
+Modest: A musical harmony library for lua
 Written in Fennel, by Yegor Budylin.
 https://github.com/esbudylin/modest
