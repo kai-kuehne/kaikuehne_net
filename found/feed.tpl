@@ -19,7 +19,7 @@
             <![CDATA[
             <ul>
             {{- range .Entries }}
-                <li><a href="{{ .Link }}">{{ .Title }}</a> &horbar; {{ .Description }}</li>
+                <li><a href="{{ .Link }}">{{ .Title }}</a>: {{ .Description }}</li>
             {{- end }}
             </ul>
             ]]>

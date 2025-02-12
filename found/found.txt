@@ -1,7 +1,7 @@
 TBD:
 
 NESFab is a new programming language for creating NES games
-Making an NES game in either C/6502 asm was on my bucket list; this could be a nice alternative. They clain that it's "... the best performing 6502 compiler in existence."
+Making an NES game in either C/6502 asm has been on my bucket list for a while; this could be a nice alternative. They clain that it's "... the best performing 6502 compiler in existence."
 https://pubby.games/nesfab.html
 
 2025-02-08:
