@@ -1,5 +1,10 @@
 TBD:
 
+https://llllllll.co/
+
+Learn Shader Programming with Rick and Morty
+https://danielchasehooper.com/posts/code-animated-rick/
+
 NESFab is a new programming language for creating NES games
 Making an NES game in either C/6502 asm has been on my bucket list for a while; this could be a nice alternative. They clain that it's "... the best performing 6502 compiler in existence."
 https://pubby.games/nesfab.html
