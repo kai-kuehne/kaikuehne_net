@@ -37,12 +37,13 @@ body {
     scroll-behavior: smooth;
 }
 
-body > r-grid {
+body>r-grid {
     grid-column-gap: calc(var(--lineHeight) * 2);
 }
 
-a, a:hover {
-    padding: 3px 5px;
+a,
+a:hover {
+    padding: 0px 5px;
     display: inline-block;
     color: var(--linkColor);
     background-color: var(--linkBgColor);
@@ -59,12 +60,11 @@ a:visited {
 }
 
 r-cell.ruler {
-  height: 0.2rem;
-  background: var(--textColor);
-  margin-top: calc(var(--lineHeight) * 2);
+    height: 0.2rem;
+    background: var(--textColor);
+    margin-top: calc(var(--lineHeight) * 2);
 }
 
-r-grid > r-cell.h2 {
-  margin-top: var(--lineHeight);
+section {
+    margin-bottom: calc(var(--lineHeight) * 2);
 }
-
