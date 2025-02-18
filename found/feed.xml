@@ -5,10 +5,24 @@
     <link href="https://kaikuehne.net/found/feed.xml" rel="self"/>
     <link href="https://kaikuehne.net/found/"/>
     <id>https://kaikuehne.net/found/</id>
-    <updated>2025-02-13T12:57:52Z</updated>
+    <updated>2025-02-18T22:12:08Z</updated>
     <author>
         <name>Kai Kühne</name>
     </author>
+    <entry>
+        <title>2025-02-18</title>
+        <link href="https://kaikuehne.net/found#2025-02-18"/>
+        <id>https://kaikuehne.net/found/#2025-02-18</id>
+        <content type="html">
+            <![CDATA[
+            <ul>
+                <li><a href="https://llllllll.co/">lines</a>: Music production forum</li>
+                <li><a href="https://danielchasehooper.com/posts/code-animated-rick/">Learn Shader Programming with Rick and Morty</a>: Draw stuff using Signed Distance Fields.</li>
+                <li><a href="https://pubby.games/nesfab.html">NESFab is a new programming language for creating NES games</a>: Making an NES game in either C/6502 assembler has been on my bucket list for a while; this could be a nice alternative. They claim that it's "... the best performing 6502 compiler in existence."</li>
+            </ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>2025-02-08</title>
         <link href="https://kaikuehne.net/found#2025-02-08"/>
