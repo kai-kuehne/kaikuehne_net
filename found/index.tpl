@@ -15,16 +15,12 @@
             <h1>Found;<br>Not Lost</h1>
             <br>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived not
-                only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s
-                with the release of Letraset sheets containing Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus
-                PageMaker including versions of Lorem Ipsum.
+                Welcome to <b><i>Found; Not Lost</i></b> where I share links to cool things I find online.
+                What's cool? Programming, Design, Game Development, Music Production and everything in between.
+                There will probably be an occasional random link as well, and maybe even artwork or a super insightful
+                quote.
             </p>
+            <p><a href="/found/feed.xml">There's an RSS feed variant of this page.</a></p>
         </r-cell>
         <r-cell span="4-8">
         {{- range .}}
