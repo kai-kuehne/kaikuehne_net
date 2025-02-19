@@ -30,7 +30,7 @@
     }
 }
 
-body {
+html {
     background-color: var(--bgColor);
     color: var(--textColor);
     overflow-x: hidden;
