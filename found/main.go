@@ -16,14 +16,14 @@ func main() {
 		panic(err)
 	}
 
-	updated := time.Now().UTC().Format(time.RFC3339)
-	feed := Feed{updated, sections}
+	updated_page := time.Now().UTC().Format("20060102150405")
+	updated_feed := time.Now().UTC().Format(time.RFC3339)
 
-	renderFile("index.tpl", "index.html", sections)
-	renderFile("feed.tpl", "feed.xml", feed)
+	renderFile("index.tpl", "index.html", TemplateContext{updated_page, sections})
+	renderFile("feed.tpl", "feed.xml", TemplateContext{updated_feed, sections})
 }
 
-type Feed struct {
+type TemplateContext struct {
 	Updated  string
 	Sections []Section
 }

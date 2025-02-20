@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/found/feed.xml">
     <link rel="stylesheet" href="/raster2.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css?v={{.Updated}}">
 </head>
 <body>
     <r-grid columns="9">
@@ -15,15 +15,17 @@
             <h1>Found;<br>Not Lost</h1>
             <br>
             <p>
-                Welcome to <b><i>Found; Not Lost</i></b> where I share links to cool things I find online.
-                What's cool? Programming, Design, Game Development, Music Production and everything in between.
-                There will probably be an occasional random link as well, and maybe even artwork or a super insightful
-                quote.
+                Welcome to <b><i>Found; Not Lost</i></b> where I share
+                links to cool things I find online. What's cool?
+                Programming, Design, Game Development, Music
+                Production and everything in between. There will
+                probably be an occasional random link as well, and
+                maybe even artwork or a super insightful quote.
             </p>
             <p><a href="/found/feed.xml">There's an RSS feed variant of this page.</a></p>
         </r-cell>
         <r-cell span="4-8">
-        {{- range .}}
+        {{- range .Sections}}
             <section id="{{.Date}}">
                 <h2>{{.Date}}</h2>
                 {{- range .Entries}}
