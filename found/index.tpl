@@ -27,7 +27,7 @@
             <section id="{{.Date}}">
                 <h2>{{.Date}}</h2>
                 {{- range .Entries}}
-                    <p><a href="{{.Link}}">{{.Title}}</a> &horbar; {{.Description}}</p>
+                    <p><a href="{{.Link}}" target="_blank">{{.Title}}</a> &horbar; {{.Description}}</p>
                 {{- end}}
             </section>
         {{- end}}
