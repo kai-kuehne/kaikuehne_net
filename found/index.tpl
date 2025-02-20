@@ -20,7 +20,7 @@
                 Programming, Design, Game Development, Music
                 Production and everything in between. There will
                 probably be an occasional random link as well, and
-                maybe even artwork or a super insightful quote.
+                maybe even artwork or a super insightful&nbsp;quote.
             </p>
             <p><a href="/found/feed.xml">There's an RSS feed variant of this page.</a></p>
         </r-cell>
