@@ -22,7 +22,7 @@
                 probably be an occasional random link as well, and
                 maybe even artwork or a super insightful&nbsp;quote.
             </p>
-            <p><a href="/found/feed.xml">There's an RSS feed variant of this page.</a></p>
+            <p>There's an <a href="/found/feed.xml">RSS feed</a> variant of this page.</p>
         </r-cell>
         <r-cell span="4-8">
         {{- range .Sections}}
