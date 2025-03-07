@@ -5,10 +5,25 @@
     <link href="https://kaikuehne.net/found/feed.xml" rel="self"/>
     <link href="https://kaikuehne.net/found/"/>
     <id>https://kaikuehne.net/found/</id>
-    <updated>2025-02-20T11:24:17Z</updated>
+    <updated>2025-03-07T20:57:41Z</updated>
     <author>
         <name>Kai Kühne</name>
     </author>
+    <entry>
+        <title>2025-03-07</title>
+        <link href="https://kaikuehne.net/found#2025-03-07"/>
+        <id>https://kaikuehne.net/found/#2025-03-07</id>
+        <content type="html">
+            <![CDATA[
+            <ul>
+                <li><a href="https://localthunk.com/blog/balatro-timeline-3aarh">The Balatro Timeline</a>: Memo about the development and release of Balatro. What stood out to me was "a very important habit I have developed for creative hobby projects is to stop working on something when I no longer feel the drive".</li>
+                <li><a href="https://github.com/electronicarts">Command & Conquer Source Code</a>: Electronic Arts seemed to have listened to some smart people and released the source code to some of their older C&C Games.</li>
+                <li><a href="https://github.com/azmr/colourblind">colorblind: A C header file & shader for simulating colourblindness and checking contrast</a>: I wonder how accurate you can get with stuff like this.</li>
+                <li><a href="https://gameaccessibilityguidelines.com/full-list/">Game Accessibility Guidelines</a>: On a similar note, a list of guidelines to make accessible games.</li>
+            </ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>2025-02-18</title>
         <link href="https://kaikuehne.net/found#2025-02-18"/>
