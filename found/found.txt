@@ -1,6 +1,19 @@
-TBD:
+2025-03-07:
 
+The Balatro Timeline
+Memo about the development and release of Balatro. What stood out to me was "a very important habit I have developed for creative hobby projects is to stop working on something when I no longer feel the drive".
+https://localthunk.com/blog/balatro-timeline-3aarh
+
+Command & Conquer Source Code
+Electronic Arts seemed to have listened to some smart people and released the source code to some of their older C&C Games.
+https://github.com/electronicarts
+
+colorblind: A C header file & shader for simulating colourblindness and checking contrast
+I wonder how accurate you can get with stuff like this.
 https://github.com/azmr/colourblind
+
+Game Accessibility Guidelines
+On a similar note, a list of guidelines to make accessible games.
 https://gameaccessibilityguidelines.com/full-list/
 
 2025-02-18:
