@@ -1,10 +1,12 @@
 @media (prefers-color-scheme: dark) {
     :root {
-        --bgColor: #30343F;
+        --bgColor: #000;
         --textColor: #FAFAFF;
         --fontSize: calc(100vw / 110);
-        --linkBgColor: #E4D9FF;
-        --linkColor: #273469;
+        --linkBgColor: #FFEE93;
+        --linkColor: #141301;
+        --quoteBgColor: hsla(var(--linkBgColor), 0);
+        --quoteBgBrightness: 100%;
     }
 }
 
@@ -15,6 +17,8 @@
         --fontSize: calc(100vw / 110);
         --linkBgColor: #E4D9FF;
         --linkColor: #273469;
+        --quoteBgColor: var(--bgColor);
+        --quoteBgBrightness: 97%;
     }
 }
 
@@ -47,7 +51,10 @@ a:hover {
     display: inline-block;
     color: var(--linkColor);
     background-color: var(--linkBgColor);
+    border-radius: 0.3em;
+    user-select: all;
     text-decoration: none;
+    z-index: -100;
 }
 
 a:hover {
@@ -69,9 +76,18 @@ section {
     margin-bottom: calc(var(--lineHeight) * 2);
 }
 
+p {
+    line-height: 1.6em;
+}
+
 q {
+    padding: 1px 5px;
     font-style: italic;
     quotes: '"' '"';
+    background-color: var(--quoteBgColor);
+    filter: brightness(var(--quoteBgBrightness));
+    border-radius: 0.3em;
+    user-select: all;
 }
 
 q::before {
