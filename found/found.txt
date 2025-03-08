@@ -1,7 +1,7 @@
 2025-03-07:
 
 The Balatro Timeline
-Memo about the development and release of Balatro. What stood out to me was "a very important habit I have developed for creative hobby projects is to stop working on something when I no longer feel the drive".
+Memo about the development and release of Balatro. What stood out to me was <i>"a very important habit I have developed for creative hobby projects is to stop working on something when I no longer feel the drive".</i>
 https://localthunk.com/blog/balatro-timeline-3aarh
 
 Command & Conquer Source Code
@@ -27,7 +27,7 @@ Draw stuff using Signed Distance Fields.
 https://danielchasehooper.com/posts/code-animated-rick/
 
 NESFab is a new programming language for creating NES games
-Making an NES game in either C/6502 assembler has been on my bucket list for a while; this could be a nice alternative. They claim that it's "... the best performing 6502 compiler in existence."
+Making an NES game in either C/6502 assembler has been on my bucket list for a while; this could be a nice alternative. They claim that it's <i>"... the best performing 6502 compiler in existence."</i>
 https://pubby.games/nesfab.html
 
 2025-02-08:
