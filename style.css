@@ -68,3 +68,7 @@ r-cell.ruler {
 section {
     margin-bottom: calc(var(--lineHeight) * 2);
 }
+
+q {
+    font-style: italic;
+}
