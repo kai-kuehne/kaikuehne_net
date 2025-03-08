@@ -1,20 +1,20 @@
 @media (prefers-color-scheme: dark) {
     :root {
-        --bgColor: #000;
-        --textColor: #fff;
-        --fontSize: calc(100vw / 90);
-        --linkBgColor: #c7e2bb;
-        --linkColor: var(--bgColor);
+        --bgColor: #30343F;
+        --textColor: #FAFAFF;
+        --fontSize: calc(100vw / 110);
+        --linkBgColor: #E4D9FF;
+        --linkColor: #273469;
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --bgColor: #fff;
-        --textColor: #000;
-        --fontSize: calc(100vw / 90);
-        --linkBgColor: #c7e2bb;
-        --linkColor: var(--textColor);
+        --bgColor: #FAFAFF;
+        --textColor: #30343F;
+        --fontSize: calc(100vw / 110);
+        --linkBgColor: #E4D9FF;
+        --linkColor: #273469;
     }
 }
 
@@ -71,4 +71,13 @@ section {
 
 q {
     font-style: italic;
+    quotes: '"' '"';
+}
+
+q::before {
+    content: open-quote;
+}
+
+q::after {
+    content: close-quote;
 }
