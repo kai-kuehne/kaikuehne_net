@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chordel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/raster2.css">
+    <style>
+        :root {
+            --grey: #666;
+            --darkGrey: #444;
+            --fontSize: calc(100vw / 80);
+        }
+
+        @media only screen and (max-width: 600px) {
+            :root {
+                --fontSize: calc(100vw / 30);
+            }
+        }
+
+        @media only screen and (max-device-width: 812px) and (orientation: landscape) {
+            :root {
+                --fontSize: 1.7vw;
+            }
+        }
+
+        body {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        textarea.code {
+            display: block;
+            width: 100%;
+            height: 40rem;
+            white-space: pre;
+            padding: 0;
+            padding-bottom: 2rem;
+            border: none;
+            border-top: 0.1rem solid transparent;
+            /*border-bottom: 0.1rem solid black;*/
+            outline: none;
+            scroll-behavior: smooth;
+            resize: none;
+        }
+
+        textarea.code.scrolled {
+            border-top-color: black;
+        }
+
+        .code-area {
+            position: relative;
+            margin-bottom: calc(var(--lineHeight) * 2);
+        }
+
+        .code-area>.overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            height: 3rem;
+            pointer-events: none;
+            background-image:
+                linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+
+        /* document grid */
+        body>r-grid {
+            grid-column-gap: calc(var(--lineHeight) * 2);
+        }
+
+        @keyframes flash {
+            20% {
+                opacity: 0;
+            }
+
+            80% {
+                opacity: 1;
+            }
+        }
+
+        /* color first eight column cells in the demo */
+        r-grid.demo>r-cell:nth-child(100n+1),
+        r-grid.demo>r-cell:nth-child(100n+2),
+        r-grid.demo>r-cell:nth-child(100n+3),
+        r-grid.demo>r-cell:nth-child(100n+4),
+        r-grid.demo>r-cell:nth-child(100n+5),
+        r-grid.demo>r-cell:nth-child(100n+6),
+        r-grid.demo>r-cell:nth-child(100n+7),
+        r-grid.demo>r-cell:nth-child(100n+8) {
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.2);
+            height: 2.2rem;
+            line-height: 1.0;
+            padding: 0;
+            text-align: center;
+            font-weight: 200;
+            font-size: 1.2rem;
+        }
+
+        r-cell.ruler {
+            height: 0.2rem;
+            background: black;
+            margin-top: calc(var(--lineHeight) * 2);
+        }
+
+        r-grid>r-cell.h2 {
+            margin-top: var(--lineHeight);
+        }
+
+        @media only screen and (max-width: 600px) {
+            #smallScreenBeacon {
+                width: 1px;
+            }
+
+            body>r-grid {
+                grid-row-gap: var(--lineHeight);
+            }
+
+            .only-large-screen {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 601px) {
+            .only-small-screen {
+                display: none;
+            }
+        }
+
+        video {
+            max-width: 50%;
+        }
+
+        a {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <r-grid columns="8">
+        <r-cell span="1.." class="h1">Chordel</r-cell><r-cell span="1..">
+            <p>Chordel is a standalone synthesizer that is played using the Ableton Push 2.<br>
+                I use it as my own little keyboard that helps me learn how to play chords using a
+                chromatic grid layout.</p>
+        </r-cell>
+        <r-cell span="1..">
+            <video src="chordel_mvp.mp4" controls></video>
+        </r-cell>
+        <r-cell span="1.." class="ruler only-large-screen"></r-cell>
+        <r-cell span="1.." class="h2">Overview</r-cell>
+        <r-cell span="1-5">
+            <p>
+                I won't be going into much detail about things that are
+                covered in depth in the <a
+                    href="https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc">Ableton
+                    Push 2 MIDI and Display Interface Manual</a>. However, I will be talking about my overall approach,
+                how the program produces sounds and, by far, the most challenging aspect: How to display an image on the
+                Push 2 display.
+            </p>
+
+            <p>The program itself runs on the computer and communicates with
+                the Ableton Push 2 over USB. To summarize, here's what it does:</p>
+
+            <ol>
+                <li><b>Receive pressed pads:</b> Continously read MIDI messages sent <i>by the</i> Push when pads are
+                    pressed.</li>
+                <li><b>Update pad colors:</b> This is done by sending MIDI messages <i>to the</i> Push.</li>
+                <li><b>Play sounds:</b> Synthesize sounds using <a
+                        href="https://github.com/schellingb/TinySoundFont">TinySoundFont</a>, a single-header
+                    synthesizer for
+                    SoundFonts.
+            </ol>
+
+            <img src="making-a-sound.svg" width="1000px">
+
+            <r-cell span="1.." class="h2">Making a Sound</h2>
+            </r-cell>
+
+        </r-cell>
+        <!--
+        <r-cell span="1.." class="h2">Color all the Pads</h2>
+            <p>Coloring of the pads is done by sending MIDI messages to the device.
+            <p>This is described in the manual </p>
+        </r-cell>
+        -->
+    </r-grid>
+</body>
+
+</html>
