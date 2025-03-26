@@ -1,0 +1,92 @@
+:root {
+    --grey: #666;
+    --darkGrey: #444;
+    --fontSize: calc(100vw / 80);
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --fontSize: calc(100vw / 30);
+    }
+}
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+    :root {
+        --fontSize: 1.7vw;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body>r-grid {
+    grid-column-gap: calc(var(--lineHeight) * 2);
+}
+
+@keyframes flash {
+    20% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+}
+
+r-grid.demo>r-cell:nth-child(100n+1),
+r-grid.demo>r-cell:nth-child(100n+2),
+r-grid.demo>r-cell:nth-child(100n+3),
+r-grid.demo>r-cell:nth-child(100n+4),
+r-grid.demo>r-cell:nth-child(100n+5),
+r-grid.demo>r-cell:nth-child(100n+6),
+r-grid.demo>r-cell:nth-child(100n+7),
+r-grid.demo>r-cell:nth-child(100n+8) {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.2);
+    height: 2.2rem;
+    line-height: 1.0;
+    padding: 0;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+r-cell.ruler {
+    height: 0.2rem;
+    background: black;
+    margin-top: calc(var(--lineHeight) * 2);
+}
+
+r-grid>r-cell.h2 {
+    margin-top: var(--lineHeight);
+}
+
+@media only screen and (max-width: 600px) {
+    #smallScreenBeacon {
+        width: 1px;
+    }
+
+    body>r-grid {
+        grid-row-gap: var(--lineHeight);
+    }
+
+    .only-large-screen {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .only-small-screen {
+        display: none;
+    }
+}
+
+video {
+    max-width: 50%;
+}
+
+a {
+    font-weight: bold;
+}

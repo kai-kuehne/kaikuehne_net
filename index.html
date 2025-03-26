@@ -6,22 +6,31 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/raster2.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <h1>Kai Kühne</h1>
-    <p>
-        Hi, I’m Kai Kühne, a software engineer based in Berlin,
-        Germany. In my day job, I mainly work as a backend developer,
-        but have recently been programming in just plain-old C and Odin.
-        I enjoy making video games, music and generally other nerd stuff.
-    </p>
-    <p>
-        <a><a href="projects/chordel/">Chordel</a></a>
-    </p>
+    <r-grid columns="8">
+        <r-cell span="1.." class="h1">Kai Kühne</r-cell>
+        <r-cell span="1-4">
+            <p>
+                Hi, I’m Kai Kühne, a software engineer based in Berlin,
+                Germany. I have worked for <a href="https://www.native-instruments.com/">Native Instruments</a> and <a
+                    href="https://wwww.soundcloud.com">SoundCloud</a> as a backend engineer.<br>
+                I enjoy making video games, music and other audio-visual stuff.
+            </p>
+        </r-cell>
+        <r-cell span="1.." class="ruler only-large-screen"></r-cell>
+        <r-cell span="1.." class="h2">Projects</r-cell>
+        <r-cell span="1-2">
+            <img src="projects/chordel/screenshot.png">
+            <p>
+                <a href="projects/chordel/">Chordel</a>
+            </p>
+        </r-cell>
+        </r-cell>
+    </r-grid>
 </body>
 
 </html>

@@ -7,187 +7,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="/raster2.css">
-    <style>
-        :root {
-            --grey: #666;
-            --darkGrey: #444;
-            --fontSize: calc(100vw / 80);
-        }
-
-        @media only screen and (max-width: 600px) {
-            :root {
-                --fontSize: calc(100vw / 30);
-            }
-        }
-
-        @media only screen and (max-device-width: 812px) and (orientation: landscape) {
-            :root {
-                --fontSize: 1.7vw;
-            }
-        }
-
-        body {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        textarea.code {
-            display: block;
-            width: 100%;
-            height: 40rem;
-            white-space: pre;
-            padding: 0;
-            padding-bottom: 2rem;
-            border: none;
-            border-top: 0.1rem solid transparent;
-            /*border-bottom: 0.1rem solid black;*/
-            outline: none;
-            scroll-behavior: smooth;
-            resize: none;
-        }
-
-        textarea.code.scrolled {
-            border-top-color: black;
-        }
-
-        .code-area {
-            position: relative;
-            margin-bottom: calc(var(--lineHeight) * 2);
-        }
-
-        .code-area>.overlay {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -1px;
-            height: 3rem;
-            pointer-events: none;
-            background-image:
-                linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        }
-
-        /* document grid */
-        body>r-grid {
-            grid-column-gap: calc(var(--lineHeight) * 2);
-        }
-
-        @keyframes flash {
-            20% {
-                opacity: 0;
-            }
-
-            80% {
-                opacity: 1;
-            }
-        }
-
-        /* color first eight column cells in the demo */
-        r-grid.demo>r-cell:nth-child(100n+1),
-        r-grid.demo>r-cell:nth-child(100n+2),
-        r-grid.demo>r-cell:nth-child(100n+3),
-        r-grid.demo>r-cell:nth-child(100n+4),
-        r-grid.demo>r-cell:nth-child(100n+5),
-        r-grid.demo>r-cell:nth-child(100n+6),
-        r-grid.demo>r-cell:nth-child(100n+7),
-        r-grid.demo>r-cell:nth-child(100n+8) {
-            background-color: transparent;
-            color: rgba(0, 0, 0, 0.2);
-            height: 2.2rem;
-            line-height: 1.0;
-            padding: 0;
-            text-align: center;
-            font-weight: 200;
-            font-size: 1.2rem;
-        }
-
-        r-cell.ruler {
-            height: 0.2rem;
-            background: black;
-            margin-top: calc(var(--lineHeight) * 2);
-        }
-
-        r-grid>r-cell.h2 {
-            margin-top: var(--lineHeight);
-        }
-
-        @media only screen and (max-width: 600px) {
-            #smallScreenBeacon {
-                width: 1px;
-            }
-
-            body>r-grid {
-                grid-row-gap: var(--lineHeight);
-            }
-
-            .only-large-screen {
-                display: none;
-            }
-        }
-
-        @media only screen and (min-width: 601px) {
-            .only-small-screen {
-                display: none;
-            }
-        }
-
-        video {
-            max-width: 50%;
-        }
-
-        a {
-            font-weight: bold;
-        }
-    </style>
-
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <r-grid columns="8">
-        <r-cell span="1.." class="h1">Chordel</r-cell><r-cell span="1..">
+        <r-cell span="1.." class="h1">Chordel</r-cell>
+        <r-cell span="1..">
             <p>Chordel is a standalone synthesizer that is played using the Ableton Push 2.<br>
                 I use it as my own little keyboard that helps me learn how to play chords using a
                 chromatic grid layout.</p>
         </r-cell>
         <r-cell span="1..">
+            <p><em>Last Updated: March 27th, 2025.</em></p>
+        </r-cell>
+        <r-cell span="1..">
             <video src="chordel_mvp.mp4" controls></video>
         </r-cell>
         <r-cell span="1.." class="ruler only-large-screen"></r-cell>
+
+        <!-- Overview -->
         <r-cell span="1.." class="h2">Overview</r-cell>
-        <r-cell span="1-5">
+        <r-cell span="1-4">
+            <p>I won't be going into much detail about aspects that are covered in depth in the Ableton Push 2 MIDI and
+                Display Interface Manual. However, I will be talking about my overall approach, how the program produces
+                sounds, and by far the most challenging aspect: how to display an image on the Push 2 display.</p>
+
+            <p>The program itself runs on the computer and communicates with the Ableton Push 2 over USB. To summarize,
+                here's what it does:</p>
+
+            <ul>
+                <li><strong>Receive pressed pads:</strong> Continuously read MIDI messages sent by the Push when pads
+                    are
+                    pressed.</li>
+                <li><strong>Update pad colors:</strong> This is done by sending MIDI messages to the Push.</li>
+                <li><strong>Play sounds:</strong> Synthesize sounds using TinySoundFont, a single-header synthesizer for
+                    SoundFonts.</li>
+                <li><strong>Update Push screen:</strong> Composite an image using Cairo, convert it to the Push screen
+                    format, and transmit it via USB.</li>
+            </ul>
+
+            <p><img src="overview.svg" alt="System Overview Diagram"></p>
+        </r-cell>
+
+        <!-- Interesting Bits -->
+        <r-cell span="1.." class="h2">Interesting Bits</r-cell>
+        <r-cell span="1-4">
+            <p>I'm omitting details about points 1 and 2 – but TL;DR is: I'm using <a
+                    href="https://github.com/PortMidi/portmidi">PortMIDI</a> for the bi-directional MIDI
+                communication
+                with
+                the Push through its "User Port".</p>
+
+            <h3>How to Play Sounds</h3>
             <p>
-                I won't be going into much detail about things that are
-                covered in depth in the <a
-                    href="https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc">Ableton
-                    Push 2 MIDI and Display Interface Manual</a>. However, I will be talking about my overall approach,
-                how the program produces sounds and, by far, the most challenging aspect: How to display an image on the
-                Push 2 display.
+                The application I’ve built is a standalone synthesizer, not a
+                VST plugin. Unlike setups where MIDI events are sent to an
+                external synthesizer to generate sound, this application handles
+                sound generation directly. It uses <a href="https://en.wikipedia.org/wiki/SoundFont">SoundFonts</a> to
+                produce audio, with the core synthesis work handled by the <a
+                    href="https://github.com/schellingb/TinySoundFont">TinySoundFont</a>
+                library by <a href="https://mastodon.gamedev.place/@schelling">Bernhard
+                    Schelling</a>. For playback of the resulting PCM data, I rely on
+                <a href="https://github.com/libsdl-org/SDL/tree/SDL2">SDL</a>,
+                which is also used for the application’s window rendering, input
+                handling, and other system-level functionality.
             </p>
 
-            <p>The program itself runs on the computer and communicates with
-                the Ableton Push 2 over USB. To summarize, here's what it does:</p>
+            <p>This aspect of the application has been surprisingly straightforward:</p>
 
             <ol>
-                <li><b>Receive pressed pads:</b> Continously read MIDI messages sent <i>by the</i> Push when pads are
-                    pressed.</li>
-                <li><b>Update pad colors:</b> This is done by sending MIDI messages <i>to the</i> Push.</li>
-                <li><b>Play sounds:</b> Synthesize sounds using <a
-                        href="https://github.com/schellingb/TinySoundFont">TinySoundFont</a>, a single-header
-                    synthesizer for
-                    SoundFonts.
+                <li>Find a nice SoundFont: I used <a
+                        href="https://musical-artifacts.com/artifacts?tags=soundfont">musical-artifacts.com</a> to
+                    find
+                    fonts I like.</li>
+                <li>Tell TinySoundFont which SoundFont to use.</li>
+                <li>Tell it which MIDI note to play.</li>
+                <li>Write a callback that uses the retrieved PCM data and SDL to play the audio through the
+                    computer's
+                    audio
+                    device.</li>
             </ol>
 
-            <img src="making-a-sound.svg" width="1000px">
+            <p><img src="how-to-play-sounds.svg"></p>
 
-            <r-cell span="1.." class="h2">Making a Sound</h2>
-            </r-cell>
+            <p>You can check out <a
+                    href="https://github.com/schellingb/TinySoundFont/blob/main/examples/example1.c">this
+                    example code</a> from the <a
+                    href="https://github.com/schellingb/TinySoundFont/tree/main">TinySoundFont
+                    GitHub repository</a> if you’re interested in the code. I basically do the same thing.</p>
+
+            <p>This has been simple to do because TinySoundFont is just a single file. No dependencies, it just
+                works.
+            </p>
+
+            <h3>Showing an Image on the Push Screen</h3>
+            <p>The goal of this application is to help me learn and discover chords using the Push. <em>I just want
+                    to
+                    play</em> and have the Push tell me what I’m playing — it acts as an assistant. Since I was
+                aiming
+                to
+                <ins>break away from the computer screen</ins>, it was important to display the chord information
+                directly
+                on the Push’s screen. While the software still runs on a computer, I don’t need to look at it — I
+                can
+                just
+                close the lid and play.
+            </p>
+
+            <p><img src="push-screen.png"></p>
+
+            <p>Okay, on to the technical part: The most important thing to understand is that the Push doesn’t offer
+                a
+                drawing API. Its display behaves like a standard screen expecting raw pixel data in <a
+                    href="https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc#display-interface">a
+                    specific format</a>, and all communication happens over USB. The display runs at 60 FPS, so
+                updates
+                need
+                to be sent quickly. My implementation is very loosely based on <a
+                    href="https://github.com/Ableton/push2-display-with-juce">this example provided by Ableton</a>,
+                but
+                my
+                code is written in plain C rather than C++, and I’m also not using JUCE.</p>
+
+            <p>This is how it works:</p>
+            <ol>
+                <li>Composite an image using <a href="https://www.cairographics.org/">Cairo</a>. This creates an
+                    image
+                    like
+                    the one up top, in RGB24 format.</li>
+                <li>Transform the pixel data into a form that the Push screen expects. This is <a
+                        href="https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc#324-xoring-pixel-data">explained
+                        in detail here</a>.</li>
+                <li>Send the pixel data to the Push screen via USB. This turned out to be by far the hardest part
+                    for
+                    me, as
+                    I hadn’t worked with USB communication before. I’m using the <a
+                        href="https://libusb.sourceforge.io/api-1.0/libusb_io.html">async API of libusb</a> to send
+                    pixel
+                    data as quickly as possible.</li>
+            </ol>
+
+            <h2>Wrap up</h2>
+            <p>The code is still in a prototype state, and for now, I’m not planning to open source it. That said,
+                if
+                there’s interest, I’d definitely consider it. This was also my first real application written in C,
+                and
+                along the way I learned a lot — especially about memory management, memory leaks (naturally), and
+                how to
+                track them down and fix them. Talking about this is due another time though.</p>
+
+            <p>If there are questions about anything I’ve mentioned here but didn’t cover in detail, feel free to
+                reach
+                out
+                on <a href="https://bsky.app/profile/tapir2342.bsky.social">Bluesky</a> or <a
+                    href="https://mastodon.gamedev.place/@tapir">Mastodon</a>.</p>
 
         </r-cell>
-        <!--
-        <r-cell span="1.." class="h2">Color all the Pads</h2>
-            <p>Coloring of the pads is done by sending MIDI messages to the device.
-            <p>This is described in the manual </p>
-        </r-cell>
-        -->
+
     </r-grid>
 </body>
 
