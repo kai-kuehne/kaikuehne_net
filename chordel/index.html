@@ -11,39 +11,40 @@
 </head>
 
 <body>
-    <r-grid columns="8">
+    <r-grid columns="8" columns-s="1">
         <r-cell span="1.." class="h1">Chordel</r-cell>
         <r-cell span="1..">
-            <p>Chordel is a standalone synthesizer that is played using the Ableton Push 2.<br>
-                I use it as my own little keyboard that helps me learn how to play chords using a
-                chromatic grid layout.</p>
-        </r-cell>
-        <r-cell span="1..">
+            <p>Chordel is a standalone synthesizer that is played using the Ableton Push 2.</p>
             <p><em>Last Updated: March 27th, 2025.</em></p>
+            <p><video src="chordel_mvp.mp4" controls></video></p>
         </r-cell>
-        <r-cell span="1..">
-            <video src="chordel_mvp.mp4" controls></video>
-        </r-cell>
+
         <r-cell span="1.." class="ruler only-large-screen"></r-cell>
 
         <!-- Overview -->
         <r-cell span="1.." class="h2">Overview</r-cell>
         <r-cell span="1-4">
-            <p>I won't be going into much detail about aspects that are covered in depth in the Ableton Push 2 MIDI and
-                Display Interface Manual. However, I will be talking about my overall approach, how the program produces
+            <p>I won't be going into much detail about aspects that are covered in depth in the Ableton Push 2 MIDI
+                and
+                Display Interface Manual. However, I will be talking about my overall approach, how the program
+                produces
                 sounds, and by far the most challenging aspect: how to display an image on the Push 2 display.</p>
 
-            <p>The program itself runs on the computer and communicates with the Ableton Push 2 over USB. To summarize,
+            <p>The program itself runs on the computer and communicates with the Ableton Push 2 over USB. To
+                summarize,
                 here's what it does:</p>
 
             <ul>
-                <li><strong>Receive pressed pads:</strong> Continuously read MIDI messages sent by the Push when pads
+                <li><strong>Receive pressed pads:</strong> Continuously read MIDI messages sent by the Push when
+                    pads
                     are
                     pressed.</li>
                 <li><strong>Update pad colors:</strong> This is done by sending MIDI messages to the Push.</li>
-                <li><strong>Play sounds:</strong> Synthesize sounds using TinySoundFont, a single-header synthesizer for
+                <li><strong>Play sounds:</strong> Synthesize sounds using TinySoundFont, a single-header synthesizer
+                    for
                     SoundFonts.</li>
-                <li><strong>Update Push screen:</strong> Composite an image using Cairo, convert it to the Push screen
+                <li><strong>Update Push screen:</strong> Composite an image using Cairo, convert it to the Push
+                    screen
                     format, and transmit it via USB.</li>
             </ul>
 
@@ -52,7 +53,7 @@
 
         <!-- Interesting Bits -->
         <r-cell span="1.." class="h2">Interesting Bits</r-cell>
-        <r-cell span="1-4">
+        <r-cell span="1-4" span-s="1..">
             <p>I'm omitting details about points 1 and 2 – but TL;DR is: I'm using <a
                     href="https://github.com/PortMidi/portmidi">PortMIDI</a> for the bi-directional MIDI
                 communication
@@ -64,7 +65,8 @@
                 The application I’ve built is a standalone synthesizer, not a
                 VST plugin. Unlike setups where MIDI events are sent to an
                 external synthesizer to generate sound, this application handles
-                sound generation directly. It uses <a href="https://en.wikipedia.org/wiki/SoundFont">SoundFonts</a> to
+                sound generation directly. It uses <a href="https://en.wikipedia.org/wiki/SoundFont">SoundFonts</a>
+                to
                 produce audio, with the core synthesis work handled by the <a
                     href="https://github.com/schellingb/TinySoundFont">TinySoundFont</a>
                 library by <a href="https://mastodon.gamedev.place/@schelling">Bernhard
