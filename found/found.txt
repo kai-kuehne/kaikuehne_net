@@ -1,3 +1,22 @@
+https://github.com/al13n321/nnd
+https://github.com/ubisoft/Chroma
+https://amiaopensource.github.io/ffmprovisr/
+https://obrhubr.org/dithering-in-colour
+
+2025-05-09:
+
+nnd
+A debugger for linux. Doesn't use gdb nor lldb.
+https://github.com/al13n321/nnd
+
+DIY SYNTHS DATABASE
+Curated collection of 86 DIY-friendly hardware synthesizers and related standalone musical equipment. All open source.
+https://diy-synths.snnkv.com/
+
+PAPER MECHATRONICS
+Building machines using paper only. Love the idea.
+https://papermech.net/
+
 2025-03-07:
 
 The Balatro Timeline

@@ -5,10 +5,24 @@
     <link href="https://kaikuehne.net/found/feed.xml" rel="self"/>
     <link href="https://kaikuehne.net/found/"/>
     <id>https://kaikuehne.net/found/</id>
-    <updated>2025-03-08T11:07:20Z</updated>
+    <updated>2025-05-09T18:50:47Z</updated>
     <author>
         <name>Kai Kühne</name>
     </author>
+    <entry>
+        <title>2025-05-09</title>
+        <link href="https://kaikuehne.net/found#2025-05-09"/>
+        <id>https://kaikuehne.net/found/#2025-05-09</id>
+        <content type="html">
+            <![CDATA[
+            <ul>
+                <li><a href="https://github.com/al13n321/nnd">nnd</a>: A debugger for linux. Doesn't use gdb nor lldb.</li>
+                <li><a href="https://diy-synths.snnkv.com/">DIY SYNTHS DATABASE</a>: Curated collection of 86 DIY-friendly hardware synthesizers and related standalone musical equipment. All open source.</li>
+                <li><a href="https://papermech.net/">PAPER MECHATRONICS</a>: Building machines using paper only. Love the idea.</li>
+            </ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>2025-03-07</title>
         <link href="https://kaikuehne.net/found#2025-03-07"/>
