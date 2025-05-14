@@ -1,7 +1,12 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://kaikuehnet.net/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Kai Kühne'
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[outputs]
+  home = ['html']
+  page = ['html']
+  section = ['html', 'rss']
 
