@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/found.css">
+</head>
+<body>
+    <header>
+    <h1>Found;<br>Not Lost</h1>
+    <p>{{ .Content }}</p>
+      </header>
+  <main>
+    {{ range .Pages.ByDate.Reverse }}
+      <section>
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+      </section>
+    {{ end }}
+  </main>
+</body>
+</html>

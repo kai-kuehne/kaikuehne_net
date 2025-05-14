@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    margin: 0;
+}
+
+header {
+    box-sizing: border-box;
+    flex: 0 0 25rem;
+    padding-right: 0rem;
+    padding-top: 3rem;
+    padding: 5rem;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 3rem 10rem 3rem;
+}
+
+ol, ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    letter-spacing: -0.08em;
+}
