@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ .Title }}</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/found.css">
-  <link rel="alternate" type="application/rss+xml" title="Found RSS Feed" href="{{ .RelPermalink }}index.xml">
-</head>
-<body>
-    <header>
-    <h1>Found;<br>Not Lost</h1>
-    <p>{{ .Content }}</p>
-      </header>
-  <main>
-    {{ range .Pages.ByDate.Reverse }}
-      <section>
-        <h2>{{ .Title }}</h2>
-        {{ .Content }}
-      </section>
-    {{ end }}
-  </main>
-</body>
+    <head>
+        <title>{{ .Title }}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/found.css">
+        <link rel="alternate" type="application/rss+xml" title="Found RSS Feed" href="{{ .RelPermalink }}index.xml">
+    </head>
+    <body>
+        <header>
+            <h1>Found;<br>Not Lost</h1>
+            <p>{{ .Content }}</p>
+        </header>
+		<hr class="mobile-divider">
+		<main>
+        {{ range .Pages.ByDate.Reverse }}
+            <section>
+                <h2>{{ .Title }}</h2>
+                {{ .Content }}
+            </section>
+        {{ end }}
+		</main>
+    </body>
 </html>

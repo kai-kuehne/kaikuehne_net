@@ -1,3 +1,30 @@
+:root {
+    --layout-direction: row;
+    --header-order: 1;
+    --main-order: 2;
+
+    --header-padding: 5rem;
+    --main-padding: 3rem 3rem 10rem 3rem;
+
+    --divider-display: none;
+    --divider-color: #ccc;
+    --divider-margin: 0;
+}
+
+@media (max-width: 540px) {
+    :root {
+        --layout-direction: column;
+        --header-order: 0;
+        --main-order: 1;
+
+        --header-padding: 2rem 2rem 1rem 2rem;
+        --main-padding: 1rem 2rem 5rem 2rem;
+
+        --divider-display: block;
+        --divider-margin: 0 2rem;
+    }
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -5,22 +32,24 @@ html, body {
 
 body {
     display: flex;
+    flex-direction: var(--layout-direction);
     margin: 0;
 }
 
 header {
     box-sizing: border-box;
     flex: 0 0 25rem;
-    padding-right: 0rem;
-    padding-top: 3rem;
-    padding: 5rem;
+    padding: var(--header-padding);
+    order: var(--header-order);
 }
 
 main {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 3rem 3rem 10rem 3rem;
+    flex: 1;
+    order: var(--main-order);
+    padding: var(--main-padding);
 }
 
 ol, ul {
@@ -38,4 +67,11 @@ li {
 h2 {
     font-size: 1.6rem;
     letter-spacing: -0.08em;
+}
+
+.mobile-divider {
+    display: var(--divider-display);
+    border: none;
+    border-top: 1px solid var(--divider-color);
+    margin: var(--divider-margin);
 }
