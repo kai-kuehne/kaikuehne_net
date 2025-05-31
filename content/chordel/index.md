@@ -5,7 +5,7 @@ title = 'Chordel'
 
 Chordel is a standalone synthesizer that is played using the Ableton Push 2.  
 
-*Last Updated: March 27th, 2025.*
+*Last Updated: May 31st, 2025.*
 
 <video src="chordel_mvp.mp4" controls></video>
 
@@ -60,6 +60,10 @@ This is how it works:
 
 ## Wrap up
 
-The code is still in a prototype state, and for now, I’m not planning to open source it. That said, if there’s interest, I’d definitely consider it. This was also my first real application written in C, and along the way I learned a lot — especially about memory management, memory leaks (naturally), and how to track them down and fix them. Talking about this is due another time though.
+~~The code is still in a prototype state, and for now, I’m not planning to open source it. That said, if there’s interest, I’d definitely consider it.~~
+
+I have decided to open source the code! It lives on my GitHub page: https://github.com/kai-kuehne/chordel.
+
+This was also my first real application written in C, and along the way I learned a lot — especially about memory management, memory leaks (naturally), and how to track them down and fix them. Talking about this is due another time though.
 
 If there are questions about anything I’ve mentioned here but didn’t cover in detail, feel free to reach out on [Bluesky](https://bsky.app/profile/tapir2342.bsky.social) or [Mastodon](https://mastodon.gamedev.place/@tapir).
