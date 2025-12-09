@@ -13,7 +13,7 @@ I've built scalable systems at [SoundCloud](https://soundcloud.com/) and [Native
 
 **[Found; Not Lost](/found)** — Curated links on programming, design, game development, and music production.
 
-I also make games at **[tapirmakes.games](https://tapirmakes.games)**
+I also make games at **[tapirmakes.games](https://tapirmakes.games)**.
 
 ---
 
