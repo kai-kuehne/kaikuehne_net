@@ -46,7 +46,7 @@ This aspect of the application has been surprisingly straightforward:
 
 ![How to Play Sounds Diagram](/static/chordel/how-to-play-sounds.svg){.excalidraw}
 
-You can check out [this example code](https://github.com/schellingb/TinySoundFont/blob/main/examples/example1.c) from the [TinySoundFont GitHub repository](https://github.com/schellingb/TinySoundFont/tree/main) if you’re interested in the code. I basically did the same thing.
+You can check out [TinySoundFont example1.c](https://github.com/schellingb/TinySoundFont/blob/main/examples/example1.c) from the [TinySoundFont GitHub repository](https://github.com/schellingb/TinySoundFont/tree/main) if you’re interested in the code. I basically did the same thing.
 
 This has been simple to do because TinySoundFont is just a single file. No dependencies, it just works.
 
@@ -55,14 +55,14 @@ This has been simple to do because TinySoundFont is just a single file. No depen
 The goal of this application is to help me learn and discover chords using the Push.  
 *I just want to play* and have the Push tell me what I’m playing — it acts as an assistant. Since I was aiming to _break away from the computer screen_, it was important to display the chord information directly on the Push’s screen. While the software still runs on a computer, I don’t need to look at it — I can just close the lid and play.
 
-![Push Screen](/static/chordel/push-screen.png)
+![The Ableton Push 2 screen showing Chordel's chord interface with chord notes and voicing information](/static/chordel/push-screen.png)
 
-Okay, on to the technical part: The most important thing to understand is that the Push doesn’t offer a drawing API. Its display behaves like a standard screen expecting raw pixel data in [a specific format](https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc#display-interface), and all communication happens over USB. The display runs at 60 FPS, so updates need to be sent quickly. My implementation is very loosely based on [this example provided by Ableton](https://github.com/Ableton/push2-display-with-juce), but my code is written in plain C rather than C++, and I’m also not using JUCE.
+Okay, on to the technical part: The most important thing to understand is that the Push doesn’t offer a drawing API. Its display behaves like a standard screen expecting raw pixel data in [the Push 2 pixel data format](https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc#display-interface), and all communication happens over USB. The display runs at 60 FPS, so updates need to be sent quickly. My implementation is very loosely based on [Ableton's push2-display-with-juce example](https://github.com/Ableton/push2-display-with-juce), but my code is written in plain C rather than C++, and I’m also not using JUCE.
 
 This is how it works:
 
 1. Composite an image using [Cairo](https://www.cairographics.org/). This creates an image like the one up top, in RGB24 format.
-2. Transform the pixel data into a form that the Push screen expects. This is [explained in detail here](https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc#324-xoring-pixel-data).
+2. Transform the pixel data into a form that the Push screen expects. This is [the XOR pixel data specification](https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc#324-xoring-pixel-data).
 3. Send the pixel data to the Push screen via USB. This turned out to be by far the hardest part for me, as I hadn’t worked with USB communication before. I’m using the [async API of libusb](https://libusb.sourceforge.io/api-1.0/libusb_io.html) to send pixel data as quickly as possible.
 
 ## Wrap up

@@ -19,7 +19,7 @@ title: Kai Kühne
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
-        <a href="/" class="home-link"><img src="/static/logo.svg"></a>
+        <a href="/" class="home-link"><img src="/static/logo.svg" alt="Kai Kühne – home"></a>
         <nav aria-label="Site navigation">
             <a href="/writing/"{% if page.url == "/writing/" %} aria-current="page"{% endif %}>Writing</a>
             <a href="/projects/"{% if page.url == "/projects/" %} aria-current="page"{% endif %}>Projects</a>
@@ -28,7 +28,7 @@ title: Kai Kühne
     </header>
     <main id="main-content">
         {% if page.url == "/" %}
-        <h1 class="visually-hidden">Hi, I'm Kai.</h1>
+        <h1>Hi, I'm Kai.</h1>
         {% else %}
         <h1>{{ title }}</h1>
         {% endif %}

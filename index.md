@@ -21,7 +21,7 @@ Working on [Rhythm and Goose](https://rhythmandgoose.com) with [Emily Harrison](
     </li>
 {%- endfor %}
 </ul>
-<a class="see-all" href="/writing/">All writing →</a>
+<a class="see-all" href="/writing/">All writing <span aria-hidden="true">→</span></a>
 
 ## Projects {.section-label}
 
@@ -39,4 +39,4 @@ Working on [Rhythm and Goose](https://rhythmandgoose.com) with [Emily Harrison](
 </article>
 {%- endfor %}
 </div>
-<a class="see-all" href="/projects/">All projects →</a>
+<a class="see-all" href="/projects/">All projects <span aria-hidden="true">→</span></a>
