@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Found; Not Lost</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/found.css">
+    <!--
+        <link rel=alternate type="application/rss+xml" title="Found RSS Feed"
+              href="/found/index.xml">
+        -->
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="layout">
+        <header>
+          <a href="/" class="home-link"><img src="/static/logo.svg"></a>
+            <h1>Found; Not Lost</h1>
+            <p>Welcome to <em><strong>Found; Not Lost</strong></em> where I
+            share links to cool things I find online: Programming, Design, Game
+            Development, Music Production.</p>
+            <!--<p>There&rsquo;s an <a href=/found/index.xml>RSS feed</a> variant of this page.</p>-->
+        </header>
+        <hr class="mobile-divider">
+        <main id="main-content">
+            {{ content | safe }}
+        </main>
+    </div>
+</body>
+</html>

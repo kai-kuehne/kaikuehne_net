@@ -1,13 +1,20 @@
-+++
-date = '2025-05-13T19:27:56+02:00'
-title = 'Chordel'
-+++
+---
+layout: index.njk
+title: Chordel
+description: A synthesizer and training tool for the Ableton Push 2, written in C. Implements the Push 2 USB display protocol from scratch for frame-accurate rendering alongside real-time MIDI handling.
+tags: projects
+---
 
-Chordel is a standalone synthesizer that is played using the Ableton Push 2.  
+Chordel is a standalone synthesizer that is played using the Ableton Push 2.
 
 *Last Updated: May 31st, 2025.*
 
-<video src="chordel_mvp.mp4" controls></video>
+<figure>
+    <video src="/static/chordel/chordel_mvp.mp4" controls>
+        <track kind="captions" src="/static/chordel/chordel_mvp.vtt" srclang="en" label="English" default>
+    </video>
+    <figcaption><b>Demo of Chordel:</b> Playing chords on the Ableton Push 2, with chord information displayed on the Push screen and audio synthesized in real time.</figcaption>
+</figure>
 
 ## Overview
 
@@ -20,7 +27,7 @@ The program itself runs on the computer and communicates with the Ableton Push 2
 3. **Play sounds:** Synthesize sounds using TinySoundFont, a single-header synthesizer for SoundFonts.
 4. **Update Push screen:** Composite an image using Cairo, convert it to the Push screen format, and transmit it via USB.
 
-![System Overview Diagram](overview.svg)
+![System Overview Diagram](/static/chordel/overview.svg){.excalidraw}
 
 ## Interesting Bits
 
@@ -37,7 +44,7 @@ This aspect of the application has been surprisingly straightforward:
 3. Tell it which MIDI note to play.
 4. Write a callback that uses the retrieved PCM data and SDL to play the audio through the computer's audio device.
 
-![How to Play Sounds Diagram](how-to-play-sounds.svg)
+![How to Play Sounds Diagram](/static/chordel/how-to-play-sounds.svg){.excalidraw}
 
 You can check out [this example code](https://github.com/schellingb/TinySoundFont/blob/main/examples/example1.c) from the [TinySoundFont GitHub repository](https://github.com/schellingb/TinySoundFont/tree/main) if you’re interested in the code. I basically did the same thing.
 
@@ -48,7 +55,7 @@ This has been simple to do because TinySoundFont is just a single file. No depen
 The goal of this application is to help me learn and discover chords using the Push.  
 *I just want to play* and have the Push tell me what I’m playing — it acts as an assistant. Since I was aiming to _break away from the computer screen_, it was important to display the chord information directly on the Push’s screen. While the software still runs on a computer, I don’t need to look at it — I can just close the lid and play.
 
-![Push Screen](push-screen.png)
+![Push Screen](/static/chordel/push-screen.png)
 
 Okay, on to the technical part: The most important thing to understand is that the Push doesn’t offer a drawing API. Its display behaves like a standard screen expecting raw pixel data in [a specific format](https://github.com/Ableton/push-interface/blob/main/doc/AbletonPush2MIDIDisplayInterface.asc#display-interface), and all communication happens over USB. The display runs at 60 FPS, so updates need to be sent quickly. My implementation is very loosely based on [this example provided by Ableton](https://github.com/Ableton/push2-display-with-juce), but my code is written in plain C rather than C++, and I’m also not using JUCE.
 
@@ -62,7 +69,7 @@ This is how it works:
 
 ~~The code is still in a prototype state, and for now, I’m not planning to open source it. That said, if there’s interest, I’d definitely consider it.~~
 
-I have decided to open source the code! It lives on my GitHub page: https://github.com/kai-kuehne/chordel.
+I have decided to open source the code! It lives on [GitHub](https://github.com/kai-kuehne/chordel).
 
 This was also my first real application written in C, and along the way I learned a lot — especially about memory management, memory leaks (naturally), and how to track them down and fix them. Talking about this is due another time though.
 

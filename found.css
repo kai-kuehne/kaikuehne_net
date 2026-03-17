@@ -26,14 +26,21 @@
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
     margin: 0;
 }
 
 body {
     display: flex;
-    flex-direction: var(--layout-direction);
+    flex-direction: column;
     margin: 0;
+    max-width: 64rem;
+}
+
+.layout {
+    display: flex;
+    flex-direction: var(--layout-direction);
+    flex: 1;
 }
 
 header {
@@ -50,6 +57,10 @@ main {
     flex: 1;
     order: var(--main-order);
     padding: var(--main-padding);
+}
+
+footer {
+    padding: 0 3rem 2rem;
 }
 
 ol, ul {
