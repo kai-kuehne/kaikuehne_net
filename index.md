@@ -3,7 +3,7 @@ title: Kai Kühne
 layout: index.njk
 ---
 
-I'm a software engineer from Berlin. I tend to work at the edges of things — between systems, between teams, between disciplines. What usually draws me to a problem is friction that shouldn't be there: a gap between a tool and the workflow it's supposed to serve, a missing piece that forces workarounds.
+I'm a software engineer from Berlin. I tend to work at the edges of things — bridging systems, teams, and disciplines. What usually draws me to a problem is friction that shouldn't be there: a gap between a tool and the workflow it's supposed to serve, a missing piece that forces workarounds.
 
 I've worked on backend infrastructure at [SoundCloud](https://soundcloud.com/) and [Native Instruments](https://www.native-instruments.com/). These days I'm independent, spending most of my time on game development and audio tooling.
 
