@@ -195,17 +195,14 @@ a:hover {
     font-weight: 900;
     color: var(--color-text);
     text-decoration: none;
+    width: 2em;
 }
-
 
 @media (prefers-color-scheme: dark) {
 .home-link img {
-        filter: invert(1);
+    filter: invert(1);
 }
 
-.home-link img {
-    width: 2em;
-}
 
 .home-link:hover {
     color: var(--color-muted);
