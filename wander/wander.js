@@ -1,6 +1,6 @@
 const wander = {
   consoles: [
-    #'https://susam.net/wander/',
+    // 'https://susam.net/wander/',
   ],
 
   pages: [
