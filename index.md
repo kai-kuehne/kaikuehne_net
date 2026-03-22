@@ -13,7 +13,7 @@ Working on [Rhythm and Goose](https://rhythmandgoose.com) with [Emily Harrison](
 
 ## Writing {.section-label}
 
-<ul class="article-list">
+<ul class="article-list" role="list">
 {%- for article in collections.articles | slice(0, 3) %}
     <li>
         <a href="{{ article.url }}">{{ article.data.title }}</a>

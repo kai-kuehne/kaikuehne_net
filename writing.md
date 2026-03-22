@@ -4,7 +4,7 @@ layout: index.njk
 permalink: /writing/
 ---
 
-<ul class="article-list">
+<ul class="article-list" role="list">
 {%- for article in collections.articles %}
     <li>
         <a href="{{ article.url }}">{{ article.data.title }}</a>

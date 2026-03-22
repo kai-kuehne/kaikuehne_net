@@ -5,6 +5,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("found.css");
     eleventyConfig.addPassthroughCopy("style.css");
     eleventyConfig.addPassthroughCopy("static");
+    eleventyConfig.addPassthroughCopy("wander");
 
     eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAttrs));
 

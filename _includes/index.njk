@@ -14,7 +14,7 @@ title: Kai Kühne
   href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
 >
 -->
-    <title>{{ title }}</title>
+    <title>{% if title == "Kai Kühne" %}{{ title }}{% else %}{{ title }} — Kai Kühne{% endif %}</title>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
