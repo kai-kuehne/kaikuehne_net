@@ -4,6 +4,12 @@ title: Found; Not Lost
 description: Curated links on programming, design, game development, and music production.
 ---
 
+<!-- DRAFT
+## NEXT
+
+- [x86 CPU made in CSS](https://lyra.horse/x86css/), Lyra Rebane.
+-->
+
 ## 2025-12-09
 
 - [Very Sleepy, a sampling CPU profiler for

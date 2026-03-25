@@ -2,7 +2,6 @@ import markdownItAttrs from 'markdown-it-attrs';
 
 export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("cv.pdf");
-    eleventyConfig.addPassthroughCopy("found.css");
     eleventyConfig.addPassthroughCopy("style.css");
     eleventyConfig.addPassthroughCopy("static");
     eleventyConfig.addPassthroughCopy("wander");

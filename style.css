@@ -16,24 +16,8 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
     src: url('/static/fonts/InterVariable-Italic.woff2') format('woff2');
 }
 
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('/static/fonts/Inter-Regular.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('/static/fonts/Inter-Bold.woff2') format('woff2');
-}
-
 :root {
-	--font-sans: 'InterVariable', 'Inter', sans-serif;
+	--font-sans: 'InterVariable', sans-serif;
 	--line-height-body: 1.6;
 	--line-height-heading: 1.2;
 	--font-weight-body: 400;
