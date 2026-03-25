@@ -18,4 +18,16 @@ export default function(eleventyConfig) {
             return defaultRender(tokens, idx, options, env, self);
         };
     });
+
+    // Add visually-hidden "(external link)" indicator to external links for screen readers.
+    eleventyConfig.addTransform("external-link-a11y", (content, outputPath) => {
+        if (!outputPath?.endsWith(".html")) return content;
+        return content.replace(
+            /<a\s([^>]*href="https?:\/\/(?!kaikuehne\.net)[^"]*"[^>]*)>([\s\S]*?)<\/a>/g,
+            (match, attrs, inner) => {
+                if (attrs.includes('aria-label')) return match;
+                return `<a ${attrs}>${inner}<span class="visually-hidden"> (external link)</span></a>`;
+            }
+        );
+    });
 };
