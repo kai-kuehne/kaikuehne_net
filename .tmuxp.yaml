@@ -1,0 +1,12 @@
+session_name: '3'
+windows:
+- focus: 'true'
+  layout: a939,183x51,0,0{91x51,0,0[91x25,0,0,11,91x25,0,26,13],91x51,92,0,12}
+  options: {}
+  panes:
+  - make eleventy
+  - claude
+  - focus: 'true'
+    shell_command:
+  start_directory: /Users/kai/Dropbox/Projects/kaikuehne_net
+  window_name: zsh
