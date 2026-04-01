@@ -5,11 +5,13 @@ layout: index.njk
 
 I'm a software engineer from Berlin. I tend to work at the edges of things — bridging systems, teams, and disciplines. What usually draws me to a problem is friction that shouldn't be there: a gap between a tool and the workflow it's supposed to serve, a missing piece that forces workarounds.
 
-I've worked on backend infrastructure at [SoundCloud](https://soundcloud.com/) and [Native Instruments](https://www.native-instruments.com/). These days I'm independent, spending most of my time on game development and audio tooling.
+My background is mostly in backend and infrastructure. More recently I’ve been working more broadly, including full-stack applications as well as game development and audio tooling.
+
+If you’d like to work together, email me at [mail@kaikuehne.net](mailto:mail@kaikuehne.net).
 
 ## Now {.section-label}
 
-Working on [Rhythm and Goose](https://rhythmandgoose.com) with [Emily Harrison](https://emilyaudio.com/) — a rhythm game approaching a Steam demo. Also continuing work on [Chordel](/chordel/), a synthesizer and training tool for the Ableton Push 2. Based in Berlin and open to backend engineering work.
+Working on [Rhythm and Goose](https://rhythmandgoose.com) with [Emily Harrison](https://emilyaudio.com/) — a rhythm game approaching a Steam demo. Also continuing work on [Chordel](/chordel/), a synthesizer and training tool for the Ableton Push 2.
 
 ## Writing {.section-label}
 
