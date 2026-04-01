@@ -4,11 +4,15 @@ title: Found; Not Lost
 description: Curated links on programming, design, game development, and music production.
 ---
 
-<!-- DRAFT
-## NEXT
+## 2026-04-01
 
-- [x86 CPU made in CSS](https://lyra.horse/x86css/), Lyra Rebane.
--->
+- [x86 CPU made in CSS](https://lyra.horse/x86css/), by Lyra Rebane.
+- [Rolling your own minimal embedded Linux for the Raspberry Pi](https://kevinboone.me/pi_minimal.html), a 5-part series by by Kevin Boone.
+- [Fundamental of Virtual
+  Memory](https://nghiant3223.github.io/2025/05/29/fundamental_of_virtual_memory.html),
+  by Nghia Nguyen.
+- [Fast and Gorgeous Erosion Filter](https://blog.runevision.com/2026/03/fast-and-gorgeous-erosion-filter.html?m=1),
+  by Rune Skovbo Johansen.
 
 ## 2025-12-09
 
