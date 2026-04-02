@@ -3,4 +3,5 @@
 _site/
 node_modules/
 reports/
+static/music/.faircamp_*
 
