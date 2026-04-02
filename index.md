@@ -7,22 +7,7 @@ I’m a software engineer from Berlin. I build the infrastructure behind creativ
 
 I care as much about how I work with people as what I build. The best technical decision is worthless if you can’t bring a team along with you.
 
-If you’d like to work together, email me at [mail@kaikuehne.net](mailto:mail@kaikuehne.net).
-
-## Selected work {.section-label}
-
-<!--
-- Built a high-performance [FMOD-Godot audio plugin](/projects/rhythmandgoose/)
-  on its own clock, solving a timing problem existing solutions couldn’t
-handle.
--->
-- Designed and maintained SoundCloud’s tiered content fingerprinting pipeline,
-  optimizing for cost across progressively more expensive identification
-services.
-- Owned the backend platform powering Native Instruments’ desktop client,
-  product activation, and software delivery.
-- Contributed to the operational runbooks used company-wide by SoundCloud’s
-  (on-call) engineers.
+If you’d like to work together, email me at [mail@kaikuehne.net](mailto:mail@kaikuehne.net) or read my [CV](/cv.pdf).
 
 ## Now {.section-label}
 
