@@ -1,0 +1,14 @@
+title: Free Metal
+base_url: http://localhost:8080/faircamp
+
+home_image:
+description = The band, looking tough
+
+release_downloads:
+- opus
+- mp3
+
+-- synopsis
+Hey Metalheads! Check our newest releases "Much Doublebass" and "Very Tapping" - we've
+got them out for free download for you cuties! xoxo, Free Metal
+-- synopsis

@@ -2,8 +2,9 @@ import markdownItAttrs from 'markdown-it-attrs';
 
 export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("cv.pdf");
-    eleventyConfig.addPassthroughCopy("style.css");
+    eleventyConfig.addPassthroughCopy("faircamp");
     eleventyConfig.addPassthroughCopy("static");
+    eleventyConfig.addPassthroughCopy("style.css");
     eleventyConfig.addPassthroughCopy("wander");
 
     eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAttrs));

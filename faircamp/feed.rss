@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" >
+    <channel>
+        <atom:link href="http://localhost:8080/faircamp/feed.rss" rel="self" type="application/rss+xml"/>
+        <description>Hey Metalheads! Check our newest releases "Much Doublebass" and "Very Tapping" - we've
+got them out for free download for you cuties! xoxo, Free Metal</description>
+        <generator>Faircamp 1.7.0 (unknown revision)</generator>
+        
+        <language>en</language>
+        <lastBuildDate>Fri, 27 Mar 2026 11:13:26 +0000</lastBuildDate>
+        <link>http://localhost:8080/faircamp/</link>
+        <title>Free Metal</title>
+        
+        <item>
+    
+    <guid>http://localhost:8080/faircamp/test/</guid>
+    <link>http://localhost:8080/faircamp/test/</link>
+    <title> – Test</title>
+    
+</item>
+
+    </channel>
+</rss>
