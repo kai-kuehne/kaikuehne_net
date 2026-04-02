@@ -11,10 +11,18 @@ If you’d like to work together, email me at [mail@kaikuehne.net](mailto:mail@k
 
 ## Selected work {.section-label}
 
-- Built a high-performance [FMOD-Godot audio plugin](/projects/rhythmandgoose/) on its own clock, solving a timing problem existing solutions couldn’t handle
-- Designed and maintained SoundCloud’s tiered content fingerprinting pipeline, optimizing for cost across progressively more expensive identification services
-- Owned the backend platform powering Native Instruments’ desktop client, product activation, and software delivery
-- Wrote the operational runbooks used company-wide by SoundCloud’s on-call engineers
+<!--
+- Built a high-performance [FMOD-Godot audio plugin](/projects/rhythmandgoose/)
+  on its own clock, solving a timing problem existing solutions couldn’t
+handle.
+-->
+- Designed and maintained SoundCloud’s tiered content fingerprinting pipeline,
+  optimizing for cost across progressively more expensive identification
+services.
+- Owned the backend platform powering Native Instruments’ desktop client,
+  product activation, and software delivery.
+- Contributed to the operational runbooks used company-wide by SoundCloud’s
+  (on-call) engineers.
 
 ## Now {.section-label}
 
