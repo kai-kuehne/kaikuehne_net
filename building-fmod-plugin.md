@@ -73,14 +73,17 @@ like any other effect right in FMOD Studio:
 
 ![](/static/fmod-plugin-3.png)
 
+<!--
+TODO: Demo video
+-->
+
 ## What's next?
 
 My plan is to check out [various](https://github.com/jatinchowdhury18/AnalogTapeModel) [cool](https://github.com/airwindows/airwindows) [open source projects](https://github.com/webprofusion/OpenAudio) and learn from them.
 I want to convert at least one of them into an FMOD plugin (given licensing
-allows for that). That way, I could
-use a really high-quality tool right in FMOD.
+allows for that). That way, I could use a really high-quality tool right in FMOD.
 
-**fmod-lofi** works, and it sounds okay. I'm at the beginning of all this and
+Anyway, **fmod-lofi** works, and it sounds okay. I'm at the beginning of all this and
 the DSP code itself probably can be improved a lot. But that isn't really the
 point I'm trying to make.
 
