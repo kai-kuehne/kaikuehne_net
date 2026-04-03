@@ -16,7 +16,7 @@ Working on [Rhythm and Goose](https://rhythmandgoose.com) with [Emily Harrison](
 ## Writing {.section-label}
 
 <ul class="article-list" role="list">
-{%- for article in collections.articles reversed | slice(0, 3) %}
+{%- for article in collections.articles | slice(0, 3) %}
     <li>
         <a href="{{ article.url }}">{{ article.data.title }}</a>
         <time class="date" datetime="{{ article.data.updated | date:'%Y-%m-%d' }}">{{ article.data.updated | date:"%b %Y" }}</time>
