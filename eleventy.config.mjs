@@ -7,6 +7,12 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("style.css");
     eleventyConfig.addPassthroughCopy("wander");
 
+    eleventyConfig.addCollection("articles", (collectionApi) => {
+        return collectionApi.getFilteredByTag("articles").sort((a, b) => {
+            return new Date(b.data.updated) - new Date(a.data.updated);
+        });
+    });
+
     eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAttrs));
 
     // Restore VoiceOver list semantics stripped by list-style-type:none.
