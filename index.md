@@ -3,15 +3,22 @@ title: Kai Kühne
 layout: index.njk
 ---
 
-I’m a software engineer from Berlin. I build the infrastructure behind creative software — the platforms, pipelines, and tooling that sit between creative professionals and what they make. I’ve done this at [SoundCloud](https://soundcloud.com) and [Native Instruments](https://www.native-instruments.com), and independently for game engines and audio production tools.
+I’m a software engineer in Berlin. I build the infrastructure behind creative
+software: the platforms, pipelines, and tooling between creative professionals
+and what they make. I’ve done this at [SoundCloud](https://soundcloud.com) and
+[Native Instruments](https://www.native-instruments.com), and independently for
+games and audio.
+{.lead}
 
-I care as much about how I work with people as what I build. The best technical decision is worthless if you can’t bring a team along with you.
-
-If you’d like to work together, email me at [mail@kaikuehne.net](mailto:mail@kaikuehne.net) or read my [CV](/cv.pdf).
+If you’d like to work together, email me at
+[mail@kaikuehne.net](mailto:mail@kaikuehne.net) or read my [CV](/cv.pdf).
 
 ## Now {.section-label}
 
-Working on [Rhythm and Goose](https://rhythmandgoose.com) with [Emily Harrison](https://emilyaudio.com/) — a rhythm game approaching a Steam demo. Also continuing work on [Chordel](/chordel/), a synthesizer and training tool for the Ableton Push 2.
+Working on [Rhythm and Goose](https://rhythmandgoose.com) with [Emily
+Bryner](https://emilyaudio.com/), a rhythm game approaching a Steam demo.
+Also continuing work on [Chordel](/chordel/), a synthesizer and training tool
+for the Ableton Push 2.
 
 ## Writing {.section-label}
 
